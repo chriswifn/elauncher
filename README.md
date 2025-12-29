@@ -3,6 +3,7 @@
 Use the emacs daemon to control actions using `emacs-client`
 
 ## Usage
+For this to work correctly, the emacs daemon has to be running (`(server-start)` or `emacs --daemon`)
 ```bash
 elauncher '(<elisp-function>)'
 ```
@@ -23,5 +24,3 @@ elauncher '(<elisp-function>)'
      ```nix
      inputs.elauncher.packages.${pkgs.system}.default
 	 ```
-
-
