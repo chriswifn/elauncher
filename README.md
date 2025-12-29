@@ -9,8 +9,9 @@ elauncher '(<elisp-function>)'
 ```
 
 ## Functionality
-1. First search for an existing `emacs-client` instance and launch `elisp-function` in that window
-2. If non exist, create a new frame with `elisp-function`
+1. First search for an existing `emacs-client` instance and launch `elisp-function` in that window.
+2. If non exist, create a new frame with `elisp-function`.
+3. `elisp-function` can be any arbitrary emacs-lisp function, so the sky is the limit.
 
 ## Installation
 1. Using go: Clone the repository and run `go install`
