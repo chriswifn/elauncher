@@ -6,7 +6,8 @@ import (
 	"github.com/spf13/cobra"
 	"os"
 	"os/exec"
-	"regexp"
+	"strings"
+	"time"
 )
 
 type Client struct {
@@ -65,7 +66,7 @@ func main() {
 	var rootCmd = &cobra.Command{
 		Use:   "elauncher",
 		Short: "Emacs Launcher for Hyprland",
-		Args:  cobra.MinArgs(1),
+		Args:  cobra.MinimumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			emacsCommand := strings.Join(args[0:], " ")
 
