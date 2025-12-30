@@ -87,6 +87,11 @@ func main() {
 			}
 
 			if currentWS == targetWS {
+				focusCmd := exec.Command("hyprctl", "dispatch", "focuswindow", "class:emacs")
+				if err := focusCmd.Run(); err != nil {
+					fmt.Fprintf(os.Stderr, "Warning: focuswindow falled: %v\n", err)
+					return
+				}
 				fmt.Println("Current workspace matches target workspace")
 				executeEmacsCommand(emacsCommand)
 				return
